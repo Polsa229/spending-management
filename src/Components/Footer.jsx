@@ -62,14 +62,20 @@ const FooterSection = () => {
 
             {/* <div className="flex-1 w-full max-w-6xl grid grid-cols-2 md:grid-cols-2 gap-x-16 relative bg-dark rounded-2xl p-6 border-2 border-[rgba(168,85,247,0.5)] border-b-0 transition hover:scale-[1.02] duration-300 hover:shadow-[0_0_30px_5px_rgba(168,85,247,0.5)]"> */}
 
-            <div className="w-full md:max-w-6xl flex justify-center md:justify-between items-center">
-                <div className="hidden md:visible text-[#939393]">
+            <div className="w-full md:max-w-6xl flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 text-[#939393]">
+
+
+                {/* Texte */}
+                <div className="hidden md:flex text-center text-sm">
                     © 2023 Vaultflow. All Rights Reserved.
                 </div>
+                {/* Logo */}
                 <div className="text-lg font-bold">
-                    <img src={Logo} alt="" />
+                    <img src={Logo} alt="Vaultflow Logo" className="h-8 w-auto" />
                 </div>
-                <div className="md:hidden visible text-[#939393]">
+
+                {/* Texte */}
+                <div className="flex md:hidden text-center md:text-left text-sm">
                     © 2023 Vaultflow. All Rights Reserved.
                 </div>
             </div>

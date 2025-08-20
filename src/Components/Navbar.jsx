@@ -33,7 +33,7 @@ const NavbarSection = () => {
         <>
             {/* Navbar */}
             <nav
-                className={`sticky top-0 z-50 w-full backdrop-blur-sm bg-dark text-black transition-all duration-300 ease-in-out ${scrolled ? "shadow-md border-b border-gray-300" : ""}`}>
+                className={`sticky top-0 z-30 w-full backdrop-blur-sm bg-dark text-black transition-all duration-300 ease-in-out ${scrolled ? "shadow-md border-b border-gray-300" : ""}`}>
 
                 <div className="flex justify-between items-center px-6 py-4">
                     <div className="text-lg font-bold">
@@ -56,8 +56,8 @@ const NavbarSection = () => {
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="md:hidden bg-primary text-light p-2 rounded-xl">
-                        <button onClick={toggleMenu}>
+                    <div className="md:hidden">
+                        <button onClick={toggleMenu} className="bg-[#20035E] text-light p-1 items-center justify-center rounded-md">
                             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                         </button>
                     </div>
@@ -73,25 +73,50 @@ const NavbarSection = () => {
             )}
 
             {/* Offcanvas Menu (Left side) */}
-            <div className={`fixed top-0 left-0 h-full w-64 bg-primary shadow-lg z-30 transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
-                <div className="flex justify-between items-center px-6 py-4 border-b">
-                    <div className="text-lg font-bold">Menu</div>
-                    <button onClick={toggleMenu}>
-                        <FiX size={24} />
+            <div className={`z-50 fixed top-0 left-0 h-full w-full bg-primary shadow-lg transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+                {/* Header */}
+                <div className="flex justify-between items-center px-6 py-4">
+                    <div className="text-lg font-bold">
+                        <img src={Logo} alt="Vaultflow Logo" />
+                    </div>
+                    <button onClick={toggleMenu} className="bg-[#20035E] text-light p-1 items-center justify-center rounded-md">
+                        {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                     </button>
                 </div>
-                <div className="flex flex-col gap-4 px-6 py-6 text-sm items-center text-center">{
-                    items.map((item, key) => {
-                        return (
-                            <button key={key} onClick={() => { scrollToSection(navigate, item.link, item.id); toggleMenu() }} className="text-light w-full">
+
+                {/* Content */}
+                <div className="w-full flex flex-col justify-between h-[calc(100%-64px)] px-6 py-6">
+                    {/* Menu Items */}
+                    <div className="flex flex-col gap-4 text-sm items-start text-left">
+                        {items.map((item, key) => (
+                            <button
+                                key={key}
+                                onClick={() => {
+                                    scrollToSection(navigate, item.link, item.id);
+                                    toggleMenu();
+                                }}
+                                className="text-light text-xl"
+                            >
                                 {item.label}
                             </button>
-                        )
-                    })}
+                        ))}
+                    </div>
 
-                    <CallToActionBtn />
+                    {/* Bottom Button */}
+                    <div className="w-full flex pt-6">
+                        <button
+                            onClick={() => {
+                                scrollToSection(navigate, "", "#");
+                                toggleMenu();
+                            }}
+                            className="w-full text-center px-4 md:px-8 py-2 text-white font-bold text-lg rounded-full shadow-lg transition-transform transform bg-transparent border-2 border-white hover:scale-105 hover:border-secondary hover:shadow-secondary/50 hover:shadow-2xl focus:outline-none duration-300"
+                        >
+                            Talk to an expert
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </>
     );
 };

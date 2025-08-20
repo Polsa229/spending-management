@@ -6,6 +6,7 @@ import PatnersStack from '../Components/PatnersStack';
 import FeaturesSection from '../Components/FeaturesSection';
 import PowerfulAnalytics from '../Components/PowerfulAnalytics';
 import FooterSection from '../Components/Footer';
+import BackToTop from '../Components/BackToTop';
 
 function Index() {
 
@@ -24,12 +25,11 @@ function Index() {
             <div id="powerfulAnalytics">
                 <PowerfulAnalytics />
             </div>
-            <div id="footer">
+            <div id="about_us">
                 <FooterSection />
             </div>
-            
-            {/* <FooterSection /> */}
-            {/* <BackToTop className="" /> */}
+
+            <BackToTop className="" />
         </div>
     )
 }
