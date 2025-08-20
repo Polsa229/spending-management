@@ -13,19 +13,19 @@ function Index() {
     return (
         <div className="bg-primary">
             <NavbarSection />
-            <div id="accueil" className="border-2">
+            <div id="accueil" className="">
                 <HeroSection />
             </div>
-            <div id="patners">
+            <div id="patners" className="">
                 <PatnersStack />
             </div>
-            <div id="features">
+            <div id="features" className="">
                 <FeaturesSection />
             </div>
-            <div id="powerfulAnalytics">
+            <div id="powerfulAnalytics" className="">
                 <PowerfulAnalytics />
             </div>
-            <div id="about_us">
+            <div id="about_us" className="">
                 <FooterSection />
             </div>
 
