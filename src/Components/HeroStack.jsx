@@ -1,18 +1,27 @@
-import React from 'react';
-import { CiCalendar } from 'react-icons/ci';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import CallToActionBtn from './CallToActionBtn';
 import bgHeroBanner from "../assets/Hero-Stack-min.jpg"
 import imageWrapper from "../assets/Hero-Stack.png"
 
 const HeroSection = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <section
-            className="bg-primary relative  md:min-h-screen flex flex-col items-center justify-center px-4 "
+            className="flex-1 bg-primary relative md:min-h-screen flex flex-col items-center justify-center px-4 "
             style={{
                 backgroundImage: `url(${bgHeroBanner})`,
                 backgroundPosition: "center",
-                backgroundSize: "cover"
+                backgroundSize: "cover",
             }}
         >
             <div className="absolute h-6 w-full -bottom-1 left-0 bg-primary z-10 " />

@@ -13,7 +13,7 @@ function Index() {
     return (
         <div className="bg-primary">
             <NavbarSection />
-            <div id="accueil">
+            <div id="accueil" className="border-2">
                 <HeroSection />
             </div>
             <div id="patners">

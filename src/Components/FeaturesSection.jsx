@@ -6,7 +6,7 @@ const FeaturesSection = () => {
         <section
             className="bg-primary min-h-screen flex flex-col items-center justify-center"
         >
-            <div className="grid grid-cols-1 gap-4 mt-12 px-4 max-w-5xl justify-center">
+            <div className="w-full flex mt-12 px-4 max-w-5xl justify-center">
                 <div className="w-full md:w-2/3 text-center">
                     <h1 className="text-5xl md:text-[80px] font-[400px] mb-2 text-white">
                         Features that work for your future.
