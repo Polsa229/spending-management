@@ -1,0 +1,81 @@
+import React from 'react';
+import "./feature.css";
+import Logo from "../assets/Logo.png"
+
+const FooterSection = () => {
+
+    return (
+        <div className=" bg-primary flex flex-col items-center justify-center p-10 gap-8">
+            {/* Première ligne */}
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-3 xl:grid-cols-3  w-full max-w-6xl mb-3">
+                <div>
+                    <h3 className="text-xl font-bold text-light">Contact</h3>
+                    <div className=" space-y-0">
+                        <p className="text-light/70 mt-2 text-sm">
+                            Work inquires: work@vaultflow.com
+                        </p>
+                        <p className="text-light/70 mt-2 text-sm">
+                            PR and speaking: press@vaultflow.com
+                        </p>
+                        <p className="text-light/70 mt-2 text-sm">
+                            New business: newbusiness@vaultflow.com
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-light">Address</h3>
+                    <div className=" space-y-0">
+                        <p className="text-light/70 mt-2 text-sm">
+                            398 11th Street, Floor 2
+                        </p>
+                        <p className="text-light/70 mt-2 text-sm">
+                            San Francisco, CA 94103
+                        </p>
+                    </div>
+                </div>
+                <div />
+
+                <div className="">
+                    <h3 className="text-xl font-bold text-light">Careers</h3>
+                    <p className="text-light/70 mt-2 text-sm">
+                        Careers@vaultflow.com
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-light">Social</h3>
+                    <div className=" space-y-0">
+                        <p className="text-light/70 mt-2 text-sm">
+                            Twitter
+                        </p>
+                        <p className="text-light/70 mt-2 text-sm">
+                            Instagram
+                        </p>
+                        <p className="text-light/70 mt-2 text-sm">
+                            Tik Tok
+                        </p>
+                    </div>
+                </div>
+                <div className='' />
+            </div>
+
+            {/* <div className="flex-1 w-full max-w-6xl grid grid-cols-2 md:grid-cols-2 gap-x-16 relative bg-dark rounded-2xl p-6 border-2 border-[rgba(168,85,247,0.5)] border-b-0 transition hover:scale-[1.02] duration-300 hover:shadow-[0_0_30px_5px_rgba(168,85,247,0.5)]"> */}
+
+            <div className="w-full md:max-w-6xl flex justify-center md:justify-between items-center">
+                <div className="hidden md:visible text-[#939393]">
+                    © 2023 Vaultflow. All Rights Reserved.
+                </div>
+                <div className="text-lg font-bold">
+                    <img src={Logo} alt="" />
+                </div>
+                <div className="md:hidden visible text-[#939393]">
+                    © 2023 Vaultflow. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default FooterSection;
+
