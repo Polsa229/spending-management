@@ -15,8 +15,8 @@ const PatnersStack = () => {
     return (
         <section className="w-full flex justify-center">
             <div className="  text-center">
-                <p className="mb-4 text-[#ECECECA6] text-base md:text-lg">
-                    Trusted by teams at over 1,000 of the world’s leading organizations
+                <p className="mb-4 text-[#ECECECA6] text-base md:text-lg px-1">
+                    Trusted by teams at over 1,000 of the world's leading organizations
                 </p>
 
                 <div className="flex gap-8 flex-wrap justify-center">

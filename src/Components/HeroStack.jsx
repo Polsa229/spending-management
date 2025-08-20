@@ -15,7 +15,7 @@ const HeroSection = () => {
                 backgroundSize: "cover"
             }}
         >
-            <div className="absolute h-6 w-full -bottom-1 left-0 bg-primary rounded-b-full z-10 " />
+            <div className="absolute h-6 w-full -bottom-1 left-0 bg-primary z-10 " />
             {/* <div className="z-10 absolute w-full h-full inset-x-0 -top-2 rounded-2xl blur-xl bg-[0_0_20px_6px_rgba(168,85,247,0.5)] opacity-50"></div> */}
 
             <div className="flex flex-col items-center mb-6 z-10">
