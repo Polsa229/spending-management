@@ -8,7 +8,6 @@ import imageWrapper from "../assets/Hero-Stack.png"
 const HeroSection = () => {
     return (
         <section
-            id="accueil"
             className="bg-primary min-h-screen flex flex-col items-center justify-center px-4"
             style={{
                 backgroundImage: `url(${bgHeroBanner})`,

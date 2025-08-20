@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import NavbarSection from '../Components/Navbar';
 import HeroSection from '../Components/HeroStack';
 import PatnersStack from '../Components/PatnersStack';
+import FeaturesSection from '../Components/FeaturesSection';
+import PowerfulAnalytics from '../Components/PowerfulAnalytics';
 
 function Index() {
 
@@ -14,6 +16,12 @@ function Index() {
             </div>
             <div id="patners">
                 <PatnersStack />
+            </div>
+            <div id="features">
+                <FeaturesSection />
+            </div>
+            <div id="powerfulAnalytics">
+                <PowerfulAnalytics />
             </div>
             {/* <FooterSection /> */}
             {/* <BackToTop className="" /> */}

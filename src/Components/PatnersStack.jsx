@@ -20,12 +20,12 @@ const PatnersStack = () => {
         ]
     ), [])
     return (
-        <section id="patners" className="w-full flex justify-center">
-            <div className="max-w-4xl">
+        <section className="w-full flex justify-center">
+            <div className="max-w-5xl text-center">
                 <p className="mb-4 text-[#ECECECA6] text-base md:text-lg">
                     Trusted by teams at over 1,000 of the world’s leading organizations
                 </p>
-                <div className="flex justify-between items-center px-6 py-4">
+                <div className="flex justify-between items-center gap-5">
                     {
                         patners.map((img, key) => {
                             return (
