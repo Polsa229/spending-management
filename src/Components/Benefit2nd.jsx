@@ -63,10 +63,10 @@ export default function SpendBenefits() {
                                     <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
                                 </div>
                                 <div>
-                                    <h3 className="text-[20px] md:text-[22px] font-semibold text-black font-plusjakarta tracking-[-0.02em] leading-[150%]">
+                                    <h3 className="text-[20px] md:text-[22px] font-semibold text-black   tracking-[-0.02em] leading-[150%]">
                                         {item.title}
                                     </h3>
-                                    <p className="mt-2 text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-gray-600 font-plusjakarta">
+                                    <p className="mt-2 text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-gray-600  ">
                                         {item.description}
                                     </p>
                                 </div>

@@ -11,6 +11,8 @@ import Ellipse4 from "../assets/Ellipse/Ellipse4.png"
 import Benefit1st from '../Components/Benefit1st';
 import Benefit2nd from '../Components/Benefit2nd';
 import HowItWorks1st from '../Components/HowItWorks1st';
+import HowItWorks2nd from '../Components/HowItWorks2nd';
+import SuccessStories from '../Components/SuccessStories';
 
 function Index() {
     const [scrolled, setScrolled] = useState(false);
@@ -48,6 +50,12 @@ function Index() {
             </div>
             <div id="howItWorks1st">
                 <HowItWorks1st />
+            </div>
+            <div id="howItWorks2nd">
+                <HowItWorks2nd />
+            </div>
+            <div id="successStories">
+                <SuccessStories />
             </div>
 
             <div id="about_us" className="">

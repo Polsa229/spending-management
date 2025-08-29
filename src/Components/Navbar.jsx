@@ -153,7 +153,7 @@ export default function Navbar() {
         {/* Header */}
         <div className="flex justify-between items-center px-6 py-4">
           <div className="text-lg font-bold">
-            <img src={Logo} alt="Vaultflow Logo" />
+            <img src={Logo} alt="Spend.In" />
           </div>
           <button onClick={toggleMenu} className="bg-[#20035E] text-light p-1 items-center justify-center rounded-md">
             {mobileOpen ? <FaTimes /> : <FaBars />}

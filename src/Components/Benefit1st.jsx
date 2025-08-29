@@ -66,10 +66,10 @@ const Benefit1st = () => {
 
                             {/* Titre + Description */}
                             <div className="flex flex-col flex-grow items-start justify-start">
-                                <h3 className="text-[24px] leading-[150%] font-semibold tracking-[-0.03em] text-secondary900 font-plusjakarta min-h-[72px]">
+                                <h3 className="text-[24px] leading-[150%] font-semibold tracking-[-0.03em] text-secondary900  min-h-[72px]">
                                     {item.title}
                                 </h3>
-                                <p className="mt-2 text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-secondary400 font-plusjakarta">
+                                <p className="mt-2 text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-secondary400 ">
                                     {item.description}
                                 </p>
                             </div>
