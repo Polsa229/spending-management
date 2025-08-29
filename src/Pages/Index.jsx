@@ -13,6 +13,7 @@ import Benefit2nd from '../Components/Benefit2nd';
 import HowItWorks1st from '../Components/HowItWorks1st';
 import HowItWorks2nd from '../Components/HowItWorks2nd';
 import SuccessStories from '../Components/SuccessStories';
+import Testimonials from '../Components/Testimonials';
 
 function Index() {
     const [scrolled, setScrolled] = useState(false);
@@ -56,6 +57,9 @@ function Index() {
             </div>
             <div id="successStories">
                 <SuccessStories />
+            </div>
+            <div id="testimonials">
+                <Testimonials />
             </div>
 
             <div id="about_us" className="">

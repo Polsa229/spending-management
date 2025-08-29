@@ -19,6 +19,7 @@ module.exports = {
         secondary700: "#0D121F",
         secondary10: "#F3F5F7",
         secondary100: "#F3F5F7",
+        secondary200: "#C3D4E9",
         secondary300: "#90A3BF",
         secondary400: "#596780",
         secondary500: "#1A202C",

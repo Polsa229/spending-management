@@ -15,7 +15,7 @@ const benefits = [
     },
     {
         image: Image3,
-        title: `Done, let’s continue the work.`
+        title: `Done, let's continue the work.`
     },
 ];
 
