@@ -4,7 +4,7 @@ import CallToActionBtn from './CallToActionBtn';
 
 const HeroSection = () => {
     return (
-        <section className="relative h-screen flex flex-col lg:flex-1 justify-between items-center px-3 pb-0">
+        <section className="relative  max-h-screen md:min-h-screen flex flex-col lg:flex-1 justify-between items-center px-3 pb-0">
             <div className="flex-grow text-center max-w-3xl mt-10 mb-4">
                 <p className="text-5xl md:text-[80px] text-white font-bold">
                     All your business expenses in one place.

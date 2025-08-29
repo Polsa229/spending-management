@@ -2,36 +2,43 @@ import { useEffect, useState, useRef } from 'react';
 import { FaChevronDown, FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from "../assets/Logo.png";
+import { scrollToSection } from './../functions/scrollingFunctions';
+import { useNavigate } from 'react-router-dom';
 
 const menuItems = [
   {
     name: 'Products',
     link: "/#",
-    subMenu: [{ name: "Drop1", link: "/#" }]
+    subMenu: [{ name: "Benefit", link: "/", id: 'benefit1st' }]
   },
   {
     name: 'Benefits',
     link: "/#",
+    id: "benefit1st",
     subMenu: null
   },
   {
     name: 'How It Works',
     link: "/#",
+    id: "howItWorks1st",
     subMenu: null
   },
   {
     name: 'Pricing',
     link: "/#",
+    id: "pricing",
     subMenu: null
   },
   {
     name: 'Company',
     link: "/#",
+    id: "about_us",
     subMenu: [{ name: "Drop1", link: "/#" }]
   }
 ];
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -92,8 +99,13 @@ export default function Navbar() {
               className="group relative cursor-pointer"
               onMouseEnter={() => setHoveredItem(key)}
               onMouseLeave={() => setHoveredItem(null)}
+              onClick={() => scrollToSection(item.link)}
             >
-              <span className="flex items-center gap-1 hover:text-primary transition">
+              <span className="flex items-center gap-1 hover:text-primary transition"
+                onClick={() => {
+                  scrollToSection(navigate, item.link, item.id);
+                }}
+              >
                 {item.name}
                 {item.subMenu && <FaChevronDown className="text-xs" />}
               </span>
@@ -108,9 +120,15 @@ export default function Navbar() {
                     className="absolute top-full left-0 mt-2 bg-white text-black shadow-lg p-4 rounded w-40 z-40"
                   >
                     {item.subMenu.map((sub, i) => (
-                      <a key={i} href={sub.link} className="block text-sm hover:text-purple-600 transition">
+                      <span
+                        key={i}
+
+                        onClick={() => {
+                          scrollToSection(navigate, item.link, item.id);
+                        }}
+                        className="block text-sm hover:text-purple-600 transition">
                         {sub.name}
-                      </a>
+                      </span>
                     ))}
                   </motion.div>
                 )}
@@ -167,7 +185,15 @@ export default function Navbar() {
             {menuItems.map((item, key) => (
               <li key={key}>
                 <button
-                  onClick={() => setActiveItem(activeItem === key ? null : key)}
+                  onClick={() => {
+                    item.subMenu ?
+                      setActiveItem(activeItem === key ? null : key)
+                      :
+                      scrollToSection(navigate, item.link, item.id);
+
+                    toggleMenu();
+                  }}
+
                   className="flex items-center gap-2 justify-between w-full text-left hover:text-primary transition"
                 >
                   {item.name}
@@ -184,9 +210,16 @@ export default function Navbar() {
                       className="ml-4 mt-2 flex flex-col gap-1 text-gray-300"
                     >
                       {item.subMenu.map((sub, i) => (
-                        <a key={i} href={sub.link} className="block text-md hover:text-purple-600 transition">
+                        <span
+                          key={i}
+                          className="block text-md hover:text-purple-600 transition"
+                          onClick={() => {
+                            scrollToSection(navigate, sub.link, sub.id);
+                            toggleMenu();
+                          }}
+                        >
                           {sub.name}
-                        </a>
+                        </span>
                       ))}
                     </motion.div>
                   )}

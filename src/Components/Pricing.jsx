@@ -61,7 +61,7 @@ export const pricingData = [
 
 export default function Pricing() {
 
-    const [isYearly, setIsYearly] = useState(false)
+    const [isYearly, setIsYearly] = useState(true)
 
     return (
         <section className="py-16 px-6 md:px-20">
