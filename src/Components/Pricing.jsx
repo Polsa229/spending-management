@@ -113,68 +113,76 @@ export default function Pricing() {
                 </div>
                 {/* Grid 3 colonnes */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingData.map((plan) => (
-                        <div
-                            key={plan.title}
-                            className="bg-secondary100 text-black rounded-xl p-6 flex flex-col"
-                        >
-                            <div
-                                className="flex justify-between items-center"
-                            >
+                    {pricingData.map((plan) => {
+                        const netRate = 1 - 0.65;
+                        const discountedYearly = plan.price;
 
+                        // prix annuel d'origine (avant remise)
+                        let baseYearlyPrice = discountedYearly / netRate;
+                        baseYearlyPrice = baseYearlyPrice.toFixed(2)
+                        return (
+                            <div
+                                key={plan.title}
+                                className="bg-secondary100 text-black rounded-xl p-6 flex flex-col"
+                            >
                                 <div
-                                    className="flex justify-between items-center gap-3"
+                                    className="flex justify-between items-center"
                                 >
-                                    <img src={plan.icon} alt={plan.title} className="w-6 h-6 " />
-                                    {/* Titre & Prix */}
-                                    <h3 className="text-2xl font-bold">{plan.title}</h3>
+
+                                    <div
+                                        className="flex justify-between items-center gap-3"
+                                    >
+                                        <img src={plan.icon} alt={plan.title} className="w-6 h-6 " />
+                                        {/* Titre & Prix */}
+                                        <h3 className="text-2xl font-bold">{plan.title}</h3>
+                                    </div>
+
+                                    {/* Badge “Popular” */}
+                                    {plan.popular && (
+                                        <span className="self-center mb-4 px-3 py-1 bg-secondary700 text-white rounded-full text-sm font-semibold">
+                                            Popular
+                                        </span>
+                                    )}
+
                                 </div>
 
-                                {/* Badge “Popular” */}
-                                {plan.popular && (
-                                    <span className="self-center mb-4 px-3 py-1 bg-secondary700 text-white rounded-full text-sm font-semibold">
-                                        Popular
-                                    </span>
-                                )}
+                                <p className="text-secondary400 mt-2">{plan.description}</p>
 
+                                <div className="flex items-baseline mt-4">
+                                    <span className="text-4xl font-extrabold">${!isYearly && plan.price ? baseYearlyPrice : plan.price}</span>
+                                    <span className="ml-1 text-lg text-secondary300">/month</span>
+                                </div>
+
+                                {/* Liste des fonctionnalités */}
+                                <ul className="mt-6 space-y-3 flex-1">
+                                    {plan.features.map((feature, idx) => (
+                                        <li key={idx} className="flex items-center">
+                                            {
+                                                feature.included ?
+                                                    <div className="bg-[green] mr-2 rounded-full flex items-center justify-center p-1">
+
+                                                        <FaCheck className="text-white" />
+                                                    </div>
+                                                    :
+
+                                                    <div className="bg-secondary400 mr-2 rounded-full flex items-center justify-center p-1">
+                                                        <FaXmark className="text-white" />
+                                                    </div>
+                                            }
+                                            <span className={`text-sm ${feature.included ? "text-secondary700" : "text-secondary400"} `}>{feature.text}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                {/* Bouton d’action */}
+                                <button
+                                    className={`mt-6 w-full py-3 rounded-full font-semibold transition bg-primary text-white`}
+                                >
+                                    {plan.buttonText}
+                                </button>
                             </div>
-
-                            <p className="text-secondary400 mt-2">{plan.description}</p>
-
-                            <div className="flex items-baseline mt-4">
-                                <span className="text-4xl font-extrabold">${isYearly && plan.price ? plan.price / 0.65 : plan.price}</span>
-                                <span className="ml-1 text-lg text-secondary300">/month</span>
-                            </div>
-
-                            {/* Liste des fonctionnalités */}
-                            <ul className="mt-6 space-y-3 flex-1">
-                                {plan.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-center">
-                                        {
-                                            feature.included ?
-                                                <div className="bg-[green] mr-2 rounded-full flex items-center justify-center p-1">
-
-                                                    <FaCheck className="text-white" />
-                                                </div>
-                                                :
-
-                                                <div className="bg-secondary400 mr-2 rounded-full flex items-center justify-center p-1">
-                                                    <FaXmark className="text-white" />
-                                                </div>
-                                        }
-                                        <span className={`text-sm ${feature.included ? "text-secondary700" : "text-secondary400"} `}>{feature.text}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            {/* Bouton d’action */}
-                            <button
-                                className={`mt-6 w-full py-3 rounded-full font-semibold transition bg-primary text-white`}
-                            >
-                                {plan.buttonText}
-                            </button>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
 
             </div>
