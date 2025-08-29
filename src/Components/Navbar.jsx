@@ -85,7 +85,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 items-center text-light">
+        <ul className="hidden lg:flex gap-6 items-center text-light">
           {menuItems.map((item, key) => (
             <li
               key={key}
@@ -121,7 +121,7 @@ export default function Navbar() {
 
         {/* Buttons */}
 
-        <div className="hidden md:flex  gap-4 items-center">
+        <div className="hidden lg:flex  gap-4 items-center">
           <button className="text-white px-4 py-2 rounded-full hover:bg-white hover:text-secondary500 transition">
             Login
           </button>
@@ -132,7 +132,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white text-xl z-50"
+          className="lg:hidden text-white text-xl z-50"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -202,7 +202,7 @@ export default function Navbar() {
               onClick={() => {
                 toggleMenu();
               }}
-              className="w-full text-center px-4 md:px-8 py-2 text-white font-bold text-lg rounded-full shadow-lg transition-transform transform bg-transparent border-2 border-white hover:scale-105 hover:border-primary hover:shadow-primary/50 hover:shadow-2xl focus:outline-none duration-300"
+              className="w-full text-center px-4 lg:px-8 py-2 text-white font-bold text-lg rounded-full shadow-lg transition-transform transform bg-transparent border-2 border-white hover:scale-105 hover:border-primary hover:shadow-primary/50 hover:shadow-2xl focus:outline-none duration-300"
             >
               Get Demo
             </button>

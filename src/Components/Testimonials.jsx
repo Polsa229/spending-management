@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image1 from '../assets/Testimonials/1.png';
 import Image2 from '../assets/Testimonials/2.png';
 import Image3 from '../assets/Testimonials/3.png';
-import CallToActionBtn from './CallToActionBtn';
+import { IoArrowBack, IoArrowForward } from 'react-icons/io5';
 
-const testtimonials = [
+const testimonials = [
     {
         image: Image1,
         name: "Jimmy Bartney",
@@ -24,14 +24,53 @@ const testtimonials = [
         name: "Moritika Kazuki",
         job: "Finance Manager at Mangan",
         title: `No doubt, Spend.In is the best!`,
-        content: `“The best”! That's what I want to say to this platform, didn't know that there's a platform to help you manage your business expenses like this! Very recommended to you who have a big business!`,
+        content: `"The best"! That's what I want to say to this platform, didn't know that there's a platform to help you manage your business expenses like this! Very recommended to you who have a big business!`,
     },
 ];
 
 export default function Testimonials() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+    // Fonction pour aller au témoignage précédent (par groupe de 3)
+    const goToPrevious = () => {
+        if (testimonials.length <= 3) return
+
+        setIsAutoPlaying(false);
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? Math.floor((testimonials.length - 1) / 3) * 3 : prevIndex - 3
+        );
+    };
+
+    // Fonction pour aller au témoignage suivant (par groupe de 3)
+    const goToNext = () => {
+        if (testimonials.length <= 3) return
+        setIsAutoPlaying(false);
+        setCurrentIndex((prevIndex) =>
+            prevIndex >= Math.floor((testimonials.length - 1) / 3) * 3 ? 0 : prevIndex + 3
+        );
+    };
+
+    // Défilement automatique
+    useEffect(() => {
+        let interval;
+        if (isAutoPlaying) {
+            if (testimonials.length <= 3) return
+            interval = setInterval(() => {
+                setCurrentIndex((prevIndex) =>
+                    prevIndex >= Math.floor((testimonials.length - 1) / 3) * 3 ? 0 : prevIndex + 3
+                );
+            }, 5000); // Change toutes les 5 secondes
+        }
+        return () => clearInterval(interval);
+    }, [isAutoPlaying]);
+
+    // Calcul des témoignages à afficher
+    const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 3);
+
     return (
         <section className="bg-secondary700 text-white py-16 px-6 md:px-20">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 grid grid-cols-1 md:grid-cols-12 gap-6 w-full items-center text-center">
                     <div className="md:col-span-8 md:col-start-3 text-center">
@@ -55,15 +94,15 @@ export default function Testimonials() {
                     </div>
                 </div>
 
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-between w-full mb-3">
-                    {testtimonials.map((item, key) => (
+                {/* Conteneur des témoignages */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-between w-full mb-8">
+                    {visibleTestimonials.map((item, index) => (
                         <div
-                            key={key}
-                            className="bg-secondary500 text-white py-12 px-2 rounded-xl"
+                            key={currentIndex + index}
+                            className="bg-secondary500 text-white p-6 rounded-xl h-full"
                         >
                             {/* Quote */}
-                            <h2 className="text-[18px] md:text-3xl font-bold mb-4">
+                            <h2 className="text-[18px] md:text-2xl font-bold mb-4">
                                 {item.title}
                             </h2>
                             <p className="text-[16px] md:text-lg leading-relaxed text-secondary100 mb-6">
@@ -85,9 +124,26 @@ export default function Testimonials() {
                     ))}
                 </div>
 
-                <div className="mt-8 md:mt-6">
-                    <CallToActionBtn />
+                {/* Contrôles de navigation */}
+                <div className="flex items-center justify-center gap-4">
+                    <button
+                        onClick={goToPrevious}
+                        className="bg-secondary500 rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors"
+                        aria-label="Previous testimonials"
+                    >
+                        <IoArrowBack />
+                    </button>
+
+
+                    <button
+                        onClick={goToNext}
+                        className="bg-primary rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors"
+                        aria-label="Next testimonials"
+                    >
+                        <IoArrowForward />
+                    </button>
                 </div>
+
             </div>
         </section>
     );

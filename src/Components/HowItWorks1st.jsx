@@ -48,14 +48,11 @@ export default function HowItWorks1st() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-between w-full mb-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center md:justify-between w-full mb-3">
                     {benefits.map((item, key) => (
                         <div
                             key={key}
                             className="relative flex flex-col h-full rounded-lg transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary"
-                            style={{
-                                maxWidth: "225px"
-                            }}
                         >
                             {/* Image */}
                             <div className="mb-4 bg-primary p-2 flex items-center justify-center absolute -top-7 -left-7"

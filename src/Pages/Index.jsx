@@ -14,6 +14,8 @@ import HowItWorks1st from '../Components/HowItWorks1st';
 import HowItWorks2nd from '../Components/HowItWorks2nd';
 import SuccessStories from '../Components/SuccessStories';
 import Testimonials from '../Components/Testimonials';
+import Pricing from '../Components/Pricing';
+import CallToAction from '../Components/CallToAction';
 
 function Index() {
     const [scrolled, setScrolled] = useState(false);
@@ -61,6 +63,13 @@ function Index() {
             <div id="testimonials">
                 <Testimonials />
             </div>
+            <div id="pricing">
+                <Pricing />
+            </div>
+            <div id="callToAction">
+                <CallToAction />
+            </div>
+
 
             <div id="about_us" className="">
                 <FooterSection />
