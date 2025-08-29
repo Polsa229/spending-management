@@ -9,7 +9,7 @@ const menuItems = [
   {
     name: 'Products',
     link: "/#",
-    subMenu: [{ name: "Benefit", link: "/", id: 'benefit1st' }]
+    subMenu: [{ name: "Drop 1", link: "/", id: 'benefit1st' }]
   },
   {
     name: 'Benefits',
@@ -33,7 +33,7 @@ const menuItems = [
     name: 'Company',
     link: "/#",
     id: "about_us",
-    subMenu: [{ name: "Drop1", link: "/#" }]
+    subMenu: [{ name: "Drop 1", link: "/#" }]
   }
 ];
 
@@ -117,12 +117,11 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 mt-2 bg-white text-black shadow-lg p-4 rounded w-40 z-40"
+                    className="absolute top-full left-0 mt-2 bg-white text-black shadow-lg p-4 rounded w-40 z-50"
                   >
                     {item.subMenu.map((sub, i) => (
                       <span
                         key={i}
-
                         onClick={() => {
                           scrollToSection(navigate, item.link, item.id);
                         }}
