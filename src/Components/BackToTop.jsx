@@ -4,8 +4,6 @@ import { ArrowUp } from "lucide-react";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // const isMobile = useIsMobile();
-  const isMobile = (window.innerWidth <= 768)
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -35,7 +33,7 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-2  z-50 h-12 w-12 rounded-full bg-secondary hover:bg-secondary/90 shadow-lg transition-all duration-300 flex justify-center items-center`}
+      className={`fixed bottom-6 right-2  z-50 h-12 w-12 rounded-full bg-primary hover:bg-secondary/90 shadow-lg transition-all duration-300 flex justify-center items-center`}
       size="icon"
       aria-label={"backToTop"}
     >

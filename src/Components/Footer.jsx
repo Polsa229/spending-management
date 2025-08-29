@@ -1,13 +1,12 @@
-import React from 'react';
-import "./feature.css";
+
 import Logo from "../assets/Logo.png"
 
 const FooterSection = () => {
 
     return (
         <div className=" bg-primary flex flex-col items-center justify-center p-10 gap-8">
-            {/* Première ligne */}
             <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-3 xl:grid-cols-3  w-full max-w-6xl mb-3">
+                {/* Premier Card */}
                 <div>
                     <h3 className="text-xl font-bold text-light">Contact</h3>
                     <div className=" space-y-0">
@@ -23,6 +22,7 @@ const FooterSection = () => {
                     </div>
                 </div>
 
+                {/* deuxieme Card */}
                 <div>
                     <h3 className="text-xl font-bold text-light">Address</h3>
                     <div className=" space-y-0">
@@ -34,8 +34,10 @@ const FooterSection = () => {
                         </p>
                     </div>
                 </div>
+                {/* Card  vide*/}
                 <div />
 
+                {/* troisieme Card */}
                 <div className="">
                     <h3 className="text-xl font-bold text-light">Careers</h3>
                     <p className="text-light/70 mt-2 text-sm">
@@ -43,6 +45,7 @@ const FooterSection = () => {
                     </p>
                 </div>
 
+                {/* quatrieme Card */}
                 <div>
                     <h3 className="text-xl font-bold text-light">Social</h3>
                     <div className=" space-y-0">
@@ -57,18 +60,16 @@ const FooterSection = () => {
                         </p>
                     </div>
                 </div>
+                {/* Card vide */}
                 <div className='' />
             </div>
 
-            {/* <div className="flex-1 w-full max-w-6xl grid grid-cols-2 md:grid-cols-2 gap-x-16 relative bg-dark rounded-2xl p-6 border-2 border-[rgba(168,85,247,0.5)] border-b-0 transition hover:scale-[1.02] duration-300 hover:shadow-[0_0_30px_5px_rgba(168,85,247,0.5)]"> */}
-
             <div className="w-full md:max-w-6xl flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 text-[#939393]">
-
-
                 {/* Texte */}
                 <div className="hidden md:flex text-center text-sm">
                     © 2023 Vaultflow. All Rights Reserved.
                 </div>
+
                 {/* Logo */}
                 <div className="text-lg font-bold">
                     <img src={Logo} alt="Vaultflow Logo" className="h-8 w-auto" />

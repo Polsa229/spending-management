@@ -1,4 +1,4 @@
-Pour ce challenge l'objectif c'est de faire une intégration complète de cette maquette. Responsive mobile, tablette et desktop.
+Pour ce challenge l'objectif c'est de faire du design pixel perfect. Utilisez le design système disponible sur le Figma.
 
 ### `npm start`
 
