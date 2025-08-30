@@ -51,14 +51,14 @@ export default function SuccessStories() {
                                 {/* Buttons */}
                                 <button
                                     onClick={() => setActive('with')}
-                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'with' ? 'bg-primary text-white' : 'text-secondary300'
+                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'with' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary300'
                                         }`}
                                 >
                                     With Spend.In
                                 </button>
                                 <button
                                     onClick={() => setActive('without')}
-                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'without' ? 'bg-primary text-white' : 'text-secondary300'
+                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'without' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary300'
                                         }`}
                                 >
                                     Without Spend.In

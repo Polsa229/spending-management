@@ -94,30 +94,45 @@ export default function Testimonials() {
                     </div>
                 </div>
 
-                {/* Conteneur des témoignages */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-between w-full mb-8">
+                <div className="grid md:grid-cols-3 gap-8 mb-12 items-stretch">
                     {visibleTestimonials.map((item, index) => (
                         <div
-                            key={currentIndex + index}
-                            className="bg-secondary500 text-white p-6 rounded-xl h-full"
+                            key={index}
+                            className="
+        bg-secondary500 
+        rounded-xl 
+        p-6 
+        flex flex-col 
+        h-full
+      "
                         >
-                            {/* Quote */}
-                            <h2 className="text-[18px] md:text-2xl font-bold mb-4">
-                                {item.title}
-                            </h2>
-                            <p className="text-[16px] md:text-lg leading-relaxed text-secondary100 mb-6">
-                                {item.content}
-                            </p>
+                            {/* Contenu du haut */}
+                            <div>
+                                <h3 className="text-white font-medium text-lg mb-4">
+                                    {item.title}
+                                </h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    {item.content}
+                                </p>
+                            </div>
 
-                            {/* Divider */}
-                            <div className="border-t border-white/20 my-6"></div>
-
-                            {/* Profile */}
-                            <div className="flex items-center gap-4">
-                                <img src={item.image} alt={item.name} className="w-12 h-12 rounded-full object-cover" />
-                                <div>
-                                    <p className="font-semibold text-white">{item.name}</p>
-                                    <p className={"text-sm text-secondary200"}>{item.job}</p>
+                            {/* Bloc bas poussé vers le bas */}
+                            <div className="mt-auto">
+                                <div className="border-b border-gray-600 my-5"></div>
+                                <div className="flex items-center gap-3">
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-[70px] h-[70px] rounded-[12px]"
+                                    />
+                                    <div>
+                                        <div className="text-white font-bold text-lg">
+                                            {item.name}
+                                        </div>
+                                        <div className="text-gray-400 text-sm">
+                                            {item.job}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
