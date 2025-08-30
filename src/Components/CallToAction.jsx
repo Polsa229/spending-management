@@ -4,7 +4,7 @@ import callToAction from '../assets/CallToAction.png';
 
 export default function CallToAction() {
     return (
-        <section className="bg-secondary700 text-white">
+        <section className="bg-secondary700 text-white px-3">
             <div className="max-w-4xl mx-auto">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 w-full pt-16 ">
