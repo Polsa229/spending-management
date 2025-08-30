@@ -21,6 +21,7 @@ export default function SuccessStories() {
     const [active, setActive] = useState('with');
     const list = active === 'with' ? checkList : closeList;
 
+    const image = active === 'with' ? successStories : successStoriesWithOutSpenIn;
     return (
         <section className="bg-white py-16 px-6 md:px-20">
             <div className="max-w-5xl mx-auto">
@@ -80,7 +81,7 @@ export default function SuccessStories() {
                         ))}
                     </div>
                     <div className="bg-secondary100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
-                        <img src={active === 'with' ? successStories : successStoriesWithOutSpenIn} alt="" className="object-contain" />
+                        <img src={image} alt="" className="object-contain" />
                     </div>
 
                 </div>
