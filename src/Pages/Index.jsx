@@ -16,6 +16,7 @@ import SuccessStories from '../Components/SuccessStories';
 import Testimonials from '../Components/Testimonials';
 import Pricing from '../Components/Pricing';
 import CallToAction from '../Components/CallToAction';
+import AnimatedSection from '../Components/AnimatedSection';
 
 function Index() {
     const [scrolled, setScrolled] = useState(false);
@@ -46,33 +47,60 @@ function Index() {
                 </div>
             </div>
             <div id="benefit1st">
-                <Benefit1st />
+
+                <AnimatedSection>
+                    <Benefit1st />
+                </AnimatedSection>
             </div>
             <div id="benefit2nd">
-                <Benefit2nd />
+
+                <AnimatedSection>
+                    <Benefit2nd />
+                </AnimatedSection>
             </div>
             <div id="howItWorks1st">
-                <HowItWorks1st />
+
+                <AnimatedSection>
+                    <HowItWorks1st />
+                </AnimatedSection>
             </div>
             <div id="howItWorks2nd">
-                <HowItWorks2nd />
+
+                <AnimatedSection>
+                    <HowItWorks2nd />
+                </AnimatedSection>
             </div>
             <div id="successStories">
-                <SuccessStories />
+
+                <AnimatedSection>
+                    <SuccessStories />
+                </AnimatedSection>
             </div>
             <div id="testimonials">
-                <Testimonials />
+
+                <AnimatedSection>
+                    <Testimonials />
+                </AnimatedSection>
             </div>
             <div id="pricing">
-                <Pricing />
+
+                <AnimatedSection>
+                    <Pricing />
+                </AnimatedSection>
             </div>
             <div id="callToAction">
-                <CallToAction />
+
+                <AnimatedSection>
+                    <CallToAction />
+                </AnimatedSection>
             </div>
 
 
             <div id="about_us" className="">
-                <FooterSection />
+
+                <AnimatedSection>
+                    <FooterSection />
+                </AnimatedSection>
             </div>
 
             <BackToTop className="" />

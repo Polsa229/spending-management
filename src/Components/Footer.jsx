@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from "../assets/LogoLight.png";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -82,14 +83,14 @@ const Footer = () => {
                 {/* Section du bas */}
                 <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 text-sm text-gray-500">
                     <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:gap-6">
-                        <a href="#">Privacy Policy</a>
+                        <Link to="#">Privacy Policy</Link>
 
                         {/* Bordure avant le deuxième lien */}
-                        <a href="#" className="md:border-l md:pl-6 border-black">
+                        <Link to="#" className="md:border-l md:pl-6 border-black">
                             Terms & Conditions
-                        </a>
+                        </Link>
 
-                        <a href="#" className="md:border-l md:pl-6 border-black">Cookie Policy</a>
+                        <Link to="#" className="md:border-l md:pl-6 border-black">Cookie Policy</Link>
                     </div>
 
                     <div className="text-left md:text-right">

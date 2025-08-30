@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import tickCircle from '../assets/tickCircle.png';
 import closeCircle from "../assets/closeCircle.png"
 import successStories from '../assets/successStories.png';
