@@ -58,13 +58,11 @@ function Index() {
                 </div>
             </div>
             <div id="benefit1st">
-
                 <AnimatedSection>
                     <Benefit1st />
                 </AnimatedSection>
             </div>
             <div id="benefit2nd">
-
                 <AnimatedSection>
                     <Benefit2nd />
                 </AnimatedSection>

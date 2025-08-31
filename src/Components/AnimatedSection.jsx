@@ -2,7 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const AnimatedSection = ({ children }) => {
+const AnimatedSection = ({ children, delay = 0, zIndex = 10 }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
@@ -18,13 +18,15 @@ const AnimatedSection = ({ children }) => {
             initial="hidden"
             animate={controls}
             variants={{
-                hidden: { opacity: 0, y: 50 },
+                hidden: { opacity: 0, y: 100, zIndex },
                 visible: {
                     opacity: 1,
                     y: 0,
-                    transition: { duration: 0.6, ease: 'easeOut' },
+                    zIndex,
+                    transition: { duration: 0.6, ease: 'easeOut', delay },
                 },
             }}
+            style={{ position: 'relative', zIndex }}
         >
             {children}
         </motion.div>

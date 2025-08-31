@@ -74,7 +74,7 @@ export default function Testimonials() {
                 {/* Header */}
                 <div className="mb-10 grid grid-cols-1 md:grid-cols-12 gap-6 w-full items-center text-center">
                     <div className="md:col-span-8 md:col-start-3 text-center">
-                        <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
+                        <p className="text-sm text-primary-500 px-3 py-1 rounded-full block md:mb-3">
                             WHAT THEY SAY
                         </p>
 
@@ -98,7 +98,7 @@ export default function Testimonials() {
                     {visibleTestimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-secondary-500 rounded-xl p-6 flex flex-col h-full transition-transform hover:scale-[1.5] hover:shadow-lg hover:shadow-primary"
+                            className="bg-secondary-500 rounded-xl p-6 flex flex-col h-full transition-transform hover:scale-[1.1] hover:shadow-sm hover:shadow-primary-500"
                         >
                             {/* Contenu du haut */}
                             <div>
@@ -137,7 +137,7 @@ export default function Testimonials() {
                 <div className="flex items-center justify-center gap-4">
                     <button
                         onClick={goToPrevious}
-                        className="bg-secondary-500 rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors"
+                        className="bg-secondary-500 rounded-full p-3 shadow-lg hover:bg-primary-500/90 transition-colors"
                         aria-label="Previous testimonials"
                     >
                         <IoArrowBack />
@@ -146,7 +146,7 @@ export default function Testimonials() {
 
                     <button
                         onClick={goToNext}
-                        className="bg-primary rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors"
+                        className="bg-primary-500 rounded-full p-3 shadow-lg hover:bg-primary-500/90 transition-colors"
                         aria-label="Next testimonials"
                     >
                         <IoArrowForward />
