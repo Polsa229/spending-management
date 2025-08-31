@@ -30,11 +30,11 @@ const HeroSection = () => {
             </div>
 
             {/* Image en bas */}
-            <div className="w-full max-w-[1200px] mx-auto mt-[80px] md:mt-[132px]">
+            <div className="bg-primary text-center w-[319px] h-[226.71786499023438px] md:w-[1200px] md:h-[852.857177734375px]  mx-auto mt-[80px] md:mt-[132px]">
                 <img
                     src={Dashboard}
                     alt=""
-                    className="w-[319px] h-[226.71786499023438px] md:w-[1200px] md:h-[852.857177734375px] object-contain rounded-xl"
+                    className="object-contain rounded-xl"
                     style={{
                         borderRadius: "11.79px"
                     }}
