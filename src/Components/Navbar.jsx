@@ -85,7 +85,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className={`sticky top-0 z-30 w-full flex items-center px-6 py-4 justify-between backdrop-blur-sm transition-all duration-300 ease-in-out ${scrolled ? "bg-secondary700" : ""}`}>
+      <nav className={`sticky top-0 z-30 w-full h-[88px] md:h-[100px] flex items-center px-6 py-4 justify-between backdrop-blur-sm transition-all duration-300 ease-in-out ${scrolled ? "bg-secondary700" : ""}`}>
         {/* Logo */}
         <div className="text-xl font-bold flex items-center gap-2">
           <img src={Logo} alt="Logo" className="" />

@@ -6,7 +6,7 @@ const CallToActionBtn = () => {
     const navigate = useNavigate();
     return (
 
-        <div className="gap-4 flex flex-col md:flex-row  md:justify-center">
+        <div className="gap-[24px] flex flex-col md:flex-row  md:justify-center">
             <motion.button
                 whileHover={{
                     scale: 1.05,
