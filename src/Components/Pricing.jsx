@@ -6,6 +6,7 @@ import arrow07 from '../assets/Arrow07.png';
 
 import { FaCheck } from 'react-icons/fa'
 import { FaXmark } from 'react-icons/fa6';
+import AnimatedPriceCounter from './AnimatedPriceCounter';
 
 export const pricingData = [
     {
@@ -121,7 +122,7 @@ export default function Pricing() {
                         return (
                             <div
                                 key={plan.title}
-                                className="bg-secondary100 text-black rounded-xl p-6 flex flex-col"
+                                className="bg-secondary100 text-black rounded-xl p-6 flex flex-col shadow-sm transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary"
                             >
                                 <div
                                     className="flex justify-between items-center"
@@ -147,7 +148,7 @@ export default function Pricing() {
                                 <p className="text-secondary400 mt-2">{plan.description}</p>
 
                                 <div className="flex items-baseline mt-4">
-                                    <span className="text-4xl font-extrabold">${!isYearly && plan.price ? baseYearlyPrice : plan.price}</span>
+                                    <AnimatedPriceCounter targetPrice={!isYearly && plan.price ? baseYearlyPrice : plan.price} />
                                     <span className="ml-1 text-lg text-secondary300">/month</span>
                                 </div>
 
