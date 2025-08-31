@@ -22,12 +22,13 @@ export default function SuccessStories() {
     const list = active === 'with' ? checkList : closeList;
 
     const image = active === 'with' ? successStories : successStoriesWithOutSpenIn;
+    // console.log({ list })
     return (
         <section className="bg-white py-16 px-6 md:px-20">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-10">
-                    <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
+                    <p className="text-sm text-primary-500 font-semibold py-1 rounded-full block md:mb-3">
                         INCREASE PRODUCTIVITY
                     </p>
 
@@ -65,14 +66,14 @@ export default function SuccessStories() {
                                 {/* Buttons */}
                                 <button
                                     onClick={() => setActive('with')}
-                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'with' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary-300'
+                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'with' ? 'bg-primary-500 text-white' : 'hover:bg-primary-500 text-secondary-300'
                                         }`}
                                 >
                                     With Spend.In
                                 </button>
                                 <button
                                     onClick={() => setActive('without')}
-                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'without' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary-300'
+                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'without' ? 'bg-primary-500 text-white' : 'hover:bg-primary-500 text-secondary-300'
                                         }`}
                                 >
                                     Without Spend.In
@@ -84,19 +85,45 @@ export default function SuccessStories() {
                         <p className="font-bold">
                             Track Business Expenses until its Milisecond
                         </p>
-                        {list.map((item, index) => (
-                            <div key={index} className="flex items-start gap-x-3">
-                                <img src={active === 'with' ? tickCircle : closeCircle} alt={"tick-circle"} className="w-6 h-6 " />
-                                <div>
-                                    <p className="text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-gray-600  ">
-                                        {item}
-                                    </p>
+                        <motion.div
+                            key={`list-${active}`}
+                            initial={{ y: -40, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+                        >
+                            {list.map((item, index) => (
+                                <div
+                                    key={index}
+                                    initial={{ y: -40, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.2, ease: 'easeOut', delay: 0.1 }}
+                                    className="flex items-start gap-x-3"
+                                >
+                                    <img src={active === 'with' ? tickCircle : closeCircle} alt={"tick-circle"} className="w-6 h-6 " />
+                                    <div>
+                                        <p className="text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-gray-600  ">
+                                            {item}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </motion.div>
                     </div>
-                    <div className={`bg-secondary-100 h-full flex items-end w-full shadow-md transition-transform hover:scale-[1.02] duration-300 ${active === 'with' ? "hover:shadow-[green]" : "hover:shadow-[red]"}`} style={{ borderRadius: "12px" }}>
-                        <img src={image} alt="" className="object-contain select-none" />
+
+                    <div
+                        className={`${active === 'with' ? 'hover:shadow-[green]' : 'hover:shadow-[red]'}`}
+                    >
+                        {/* Bloc image animé */}
+                        <motion.div
+                            key={`image-${active}`}
+                            initial={{ opacity: 0, x: 43 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.2, ease: 'easeOut', delay: 0.5 }}
+                            className={`bg-secondary-100 h-full flex items-end w-full shadow-md transition-transform hover:scale-[1.02] duration-300 `}
+                            style={{ borderRadius: '12px' }}
+                        >
+                            <img src={image} alt="" className="object-contain select-none" />
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>
