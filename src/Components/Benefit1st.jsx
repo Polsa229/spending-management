@@ -29,11 +29,11 @@ const Benefit1st = () => {
 
     return (
         <section
-            className="relative w-full max-w-[1440px] h-full bg-white mx-auto px-4"
+            className="relative w-full h-full flex justify-center bg-white mx-auto px-4"
         // className="flex justify-center min-h-screen px-3"
         >
 
-            <div className="mt-[32px] md:mt-[120px] mb-3">
+            <div className="max-w-[319px] md:max-w-[1200px] mb-3">
                 <div className="relative w-full mx-auto pt-[32px] md:pt-[120px]">
                     {/* Texte 1 */}
 

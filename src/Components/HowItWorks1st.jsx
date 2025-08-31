@@ -22,7 +22,7 @@ const benefits = [
 export default function HowItWorks1st() {
     return (
         <section className="bg-secondary-700 text-white py-16 px-6 md:px-20">
-            <div className="mx-auto my-auto">
+            <div className="mx-auto my-auto ">
                 {/* Header */}
                 <div className="mb-10">
                     <div className="md:text-center">
