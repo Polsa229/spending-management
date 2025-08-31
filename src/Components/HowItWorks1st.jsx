@@ -29,56 +29,59 @@ export default function HowItWorks1st() {
                         <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
                             HOW IT WORKS
                         </p>
-                        <div className="grid grid-cols-1 gap-6 w-full mb-3 items-end ">
-                            {/* Bloc titre */}
-                            <div className="">
-                                <h1 className="text-5xl font-bold">
-                                    Few Easy Steps and Done
-                                </h1>
-                            </div>
-
-                            {/* Bloc paragraphe */}
-                            <div className="">
-                                <p className="text-[20px] leading-[150%] font-normal text-secondary300 tracking-[-0.02em]">
-                                    In just few easy step, you are all set to manage your business finances.
-                                    Manage all expenses with Spend.In all in one place.
-                                </p>
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full mb-3">
+                            <div className="md:col-span-8 md:col-start-3 bg-secondary700 mx-auto px-4">
+                                {/* Bloc titre */}
+                                <div className="mb-3">
+                                    <h1 className="text-5xl font-bold">
+                                        Few Easy Steps and Done
+                                    </h1>
+                                </div>
+                                {/* Bloc paragraphe */}
+                                <div className="mb-3">
+                                    <p className="text-[20px] leading-[150%] font-normal text-secondary300 tracking-[-0.02em]">
+                                        In just few easy steps, you are all set to manage your business finances.
+                                        Manage all expenses with Spend.In all in one place.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center md:justify-between w-full mb-3">
-                    {benefits.map((item, key) => (
-                        <div
-                            key={key}
-                            className="relative flex flex-col h-full rounded-lg transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary"
-                        >
-                            {/* Image */}
-                            <div className="mb-4 bg-primary p-2 flex items-center justify-center absolute -top-7 -left-7"
-                                style={{
-                                    borderRadius: '50px',
-                                    border: "6px solid #0D121F",
-                                    width: 50,
-                                    height: 50,
-                                    opacity: 1,
-                                }}
+                    <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:justify-between gap-10 w-full mb-3">
+                        {benefits.map((item, key) => (
+                            <div
+                                key={key}
+                                className="relative flex flex-col h-full w-[200px] mx-auto rounded-lg transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary"
+
                             >
-                                <h3 className="font-bold">{key + 1}</h3>
+                                {/* Image */}
+                                <div className="mb-4 bg-primary p-2 flex items-center justify-center absolute -top-7 -left-7"
+                                    style={{
+                                        borderRadius: '50px',
+                                        border: "6px solid #0D121F",
+                                        width: 50,
+                                        height: 50,
+                                        opacity: 1,
+                                    }}
+                                >
+                                    <h3 className="font-bold">{key + 1}</h3>
+                                </div>
+
+                                {/* Titre + Description */}
+                                <img src={item.image} alt="" className="object-contain h-[200px]"
+                                />
+                                <p className="text-[20px] leading-[150%] font-medium tracking-[-0.02em] text-center">
+                                    {item.title}
+                                </p>
+
                             </div>
+                        ))}
+                    </div>
 
-                            {/* Titre + Description */}
-                            <img src={item.image} alt="" className="object-contain" />
-                            <p className="text-[20px] leading-[150%] font-medium tracking-[-0.02em] text-center">
-                                {item.title}
-                            </p>
-
-                        </div>
-                    ))}
-                </div>
-
-                <div className="mt-8 md:mt-6">
-                    <CallToActionBtn />
+                    <div className="mt-8 md:mt-6">
+                        <CallToActionBtn />
+                    </div>
                 </div>
             </div>
         </section>

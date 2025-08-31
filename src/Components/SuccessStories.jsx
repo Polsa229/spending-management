@@ -33,9 +33,10 @@ export default function SuccessStories() {
 
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full items-end">
                         {/* Bloc titre sur 6 colonnes */}
-                        <div className="md:col-span-8">
-                            <h1 className="text-[40px] font-bold leading-tight">
-                                Reduce Time in Doing Manual Work<br />
+                        <div className="md:col-span-7">
+                            <h1 className="text-[30px] font-bold leading-tight">
+                                Reduce Time in Doing Manual Work
+                                <br />
                                 Managing Expenses
                             </h1>
                         </div>
