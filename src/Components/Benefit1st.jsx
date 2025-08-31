@@ -30,7 +30,7 @@ const Benefit1st = () => {
     return (
         <div className="flex justify-center min-h-screen px-3">
 
-            <div className="mt-10 mb-3 max-w-3xl">
+            <div className="mt-10 mb-3 max-w-6xl">
                 <div>
                     <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
                         WHY USE SPEND.IN
@@ -53,7 +53,7 @@ const Benefit1st = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mb-3">
+                <div className="mt-4 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 w-full mb-3">
                     {benefit1stCard.map((item, key) => (
                         <div
                             key={key}
@@ -61,7 +61,7 @@ const Benefit1st = () => {
                         >
                             {/* Image */}
                             <div className="mb-4">
-                                <img src={item.image} alt="" className="shadow-lg" />
+                                <img src={item.image} alt="" className="" />
                             </div>
 
                             {/* Titre + Description */}

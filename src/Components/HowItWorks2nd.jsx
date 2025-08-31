@@ -21,7 +21,7 @@ const howToWorkdata = [
 export default function HowItWorks2nd() {
     return (
         <section className="bg-secondary700 text-white py-16 px-6 md:px-20">
-            <div className="max-w-4xl mx-auto">
+            <div className=" max-w-6xl mx-auto">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-3">
                     {/* How to works 2nd */}

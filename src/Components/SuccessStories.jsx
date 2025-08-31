@@ -24,7 +24,7 @@ export default function SuccessStories() {
     const image = active === 'with' ? successStories : successStoriesWithOutSpenIn;
     return (
         <section className="bg-white py-16 px-6 md:px-20">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-10">
                     <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">

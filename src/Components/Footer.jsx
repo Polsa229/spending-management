@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="w-full bg-white   px-6 py-12">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
 
                 {/* Section du haut */}
                 <div className="flex flex-col space-y-8 md:grid md:grid-cols-5 md:gap-20 md:space-y-2">
@@ -28,11 +28,31 @@ const Footer = () => {
                         <div >
                             <h3 className="text-lg font-semibold text-gray-900 mb-4">Product</h3>
                             <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="pt-4">Digital Invoice</li>
-                                <li className="pt-4">Insights</li>
-                                <li className="pt-4">Reimbursements</li>
-                                <li className="pt-4">Virtual Assistant</li>
-                                <li className="pt-4">Artificial Intelligence</li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Digital Invoice
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Insights
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Reimbursements
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Virtual Assistant
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Artificial Intelligence
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
@@ -40,11 +60,31 @@ const Footer = () => {
                         <div>
                             <h3 className="text-sm font-semibold text-gray-900 mb-4">Company</h3>
                             <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="pt-4">About Us</li>
-                                <li className="pt-4">Newsletters</li>
-                                <li className="pt-4">Our Partners</li>
-                                <li className="pt-4">Career</li>
-                                <li className="pt-4">Contact Us</li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        About Us
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Newsletters
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Our Partners
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Career
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Contact Us
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -55,11 +95,31 @@ const Footer = () => {
                         <div>
                             <h3 className="text-sm font-semibold text-gray-900 mb-4">Resources</h3>
                             <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="pt-4">Blog</li>
-                                <li className="pt-4">Pricing</li>
-                                <li className="pt-4">FAQ</li>
-                                <li className="pt-4">Events</li>
-                                <li className="pt-4">Ebook & Guide</li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Blog
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Pricing
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        FAQ
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Events
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Ebook & Guide
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
@@ -67,11 +127,31 @@ const Footer = () => {
                         <div>
                             <h3 className="text-sm font-semibold text-gray-900 mb-4">Follow Us</h3>
                             <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="pt-4">LinkedIn</li>
-                                <li className="pt-4">Twitter</li>
-                                <li className="pt-4">Instagram</li>
-                                <li className="pt-4">Facebook</li>
-                                <li className="pt-4">YouTube</li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        LinkedIn
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Twitter
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Instagram
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        Facebook
+                                    </Link>
+                                </li>
+                                <li className="pt-4">
+                                    <Link to="#">
+                                        YouTube
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -28,7 +28,7 @@ const benefits = [
 export default function SpendBenefits() {
     return (
         <section className="bg-white py-16 px-6 md:px-20">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 text-center">
                     <div className="text-center">

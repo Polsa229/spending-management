@@ -5,7 +5,7 @@ import callToAction from '../assets/CallToAction.png';
 export default function CallToAction() {
     return (
         <section className="bg-secondary700 text-white px-3">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 w-full pt-16 ">
                     <div className="pb-4">
@@ -40,7 +40,6 @@ export default function CallToAction() {
                     <div className="bg-secondary100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
                         <img src={callToAction} alt="" className="object-contain" />
                     </div>
-
                 </div>
             </div>
         </section>

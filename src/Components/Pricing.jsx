@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
 import Free from '../assets/Pricing/free.png';
 import Pro from '../assets/Pricing/pro.png';
 import Ultimate from '../assets/Pricing/ultimate.png';
@@ -89,8 +88,8 @@ export default function Pricing() {
                                         onChange={() => setIsYearly(prev => !prev)}
                                         className="sr-only peer"
                                     />
-                                    <div className="w-24 h-12 bg-primary rounded-full peer peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary shadow-md transition-colors duration-300 peer-checked:bg-primary/80 relative">
-                                        <div className={`absolute top-1 left-1 w-10 h-10 bg-white rounded-full shadow transition-transform duration-300 ${isYearly ? 'translate-x-12' : ''}`} />
+                                    <div className=" w-14 h-8 bg-primary rounded-full peer peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary shadow-md transition-colors duration-300 peer-checked:bg-primary/80 relative">
+                                        <div className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow transition-transform duration-300 ${isYearly ? 'translate-x-6' : ''}`} />
                                     </div>
                                 </label>
 
@@ -102,7 +101,6 @@ export default function Pricing() {
                             {isYearly && (
                                 <div className="flex justify-end items-center">
                                     <div className="px-3 py-1 bg-primary100 rounded-full flex items-center gap-2 text-sm font-semibold w-auto">
-                                        <FaArrowRight size={12} />
                                         Save 65%
                                     </div>
                                     <img src={arrow07} alt="" />
