@@ -96,7 +96,7 @@ export default function SuccessStories() {
                         ))}
                     </div>
                     <div className={`bg-secondary100 h-full flex items-end w-full shadow-md transition-transform hover:scale-[1.02] duration-300 ${active === 'with' ? "hover:shadow-[green]" : "hover:shadow-[red]"}`} style={{ borderRadius: "12px" }}>
-                        <img src={image} alt="" className="object-contain  cursor-grab active:cursor-grabbing" />
+                        <img src={image} alt="" className="object-contain select-none" />
                     </div>
                 </motion.div>
             </div>
