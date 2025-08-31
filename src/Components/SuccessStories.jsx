@@ -3,7 +3,7 @@ import tickCircle from '../assets/tickCircle.png';
 import closeCircle from "../assets/closeCircle.png"
 import successStories from '../assets/successStories.png';
 import successStoriesWithOutSpenIn from '../assets/successStoriesWithOutSpenIn.png';
-
+import { motion } from 'framer-motion';
 
 const checkList = [
     "Analyze your business cost easily with group transaction thorugh tagging feature.",
@@ -45,7 +45,19 @@ export default function SuccessStories() {
 
 
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-3">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-3 cursor-grab active:cursor-grabbing"
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    onDragEnd={(event, info) => {
+                        if (info.offset.x < -50) {
+                            setActive('without'); // swipe left
+                        } else if (info.offset.x > 50) {
+                            setActive('with'); // swipe right
+                        }
+                    }}
+                >
+
                     <div className="space-y-8">
                         <div className="bg-gray-100 rounded-full p-1 flex w-fit">
                             {/* Container */}
@@ -67,6 +79,8 @@ export default function SuccessStories() {
                                 </button>
                             </div>
                         </div>
+
+
                         <p className="font-bold">
                             Track Business Expenses until its Milisecond
                         </p>
@@ -81,11 +95,10 @@ export default function SuccessStories() {
                             </div>
                         ))}
                     </div>
-                    <div className="bg-secondary100 h-full flex items-end w-full shadow-lg transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary" style={{ borderRadius: "12px" }}>
-                        <img src={image} alt="" className="object-contain" />
+                    <div className={`bg-secondary100 h-full flex items-end w-full shadow-md transition-transform hover:scale-[1.02] duration-300 ${active === 'with' ? "hover:shadow-[green]" : "hover:shadow-[red]"}`} style={{ borderRadius: "12px" }}>
+                        <img src={image} alt="" className="object-contain  cursor-grab active:cursor-grabbing" />
                     </div>
-
-                </div>
+                </motion.div>
             </div>
         </section>
     );
