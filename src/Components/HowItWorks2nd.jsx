@@ -5,7 +5,7 @@ import howToWorks2nd from '../assets/HowToWorks2nd.png';
 const howToWorkdata = [
     {
         text: "Register your Spend.In account.",
-        lineStyle: "bg-gradient-to-b from-primary to-primary/90",
+        lineStyle: "bg-gradient-to-b from-primary-500 to-primary-500/90",
     },
     {
         text: "Fill in the list of your business expenses.",
@@ -20,7 +20,7 @@ const howToWorkdata = [
 
 export default function HowItWorks2nd() {
     return (
-        <section className="bg-secondary--700 text-white py-16 px-6 md:px-20">
+        <section className="bg-secondary-700 text-white py-16 px-6 md:px-20">
             <div className=" max-w-6xl mx-auto">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-3">
@@ -33,7 +33,7 @@ export default function HowItWorks2nd() {
                         <div className="">
                             {/* Header */}
                             <div className="text-center mb-3">
-                                <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
+                                <p className="text-sm text-primary-500 px-3 py-1 rounded-full block md:mb-3">
                                     HOW IT WORKS
                                 </p>
                                 <div className="grid grid-cols-1 gap-6 w-full mb-3 items-end ">
@@ -61,7 +61,7 @@ export default function HowItWorks2nd() {
                                         <div
                                             className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${index === 2
                                                 ? "bg-white text-black"
-                                                : "bg-gradient-to-br from-primary to-primary/100 text-white"
+                                                : "bg-gradient-to-br from-primary-500 to-primary-500/100 text-white"
                                                 }`}
                                         >
                                             {index + 1}

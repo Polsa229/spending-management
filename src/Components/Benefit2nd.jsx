@@ -27,57 +27,52 @@ const benefits = [
 
 export default function SpendBenefits() {
     return (
-        <section className="bg-white py-16 px-6 md:px-20">
-            <div className="max-w-6xl mx-auto">
-                {/* Header */}
-                <div className="mb-10 text-center">
-                    <div className="text-center">
-                        <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
-                            WHY USE SPEND.IN
-                        </p>
-                        <div className="grid grid-cols-1 gap-6 w-full mb-3 items-end ">
-                            {/* Bloc titre */}
-                            <div className="">
-                                <h1 className="text-5xl font-bold">
-                                    Easy, Simple,
-                                    Affordable
-                                </h1>
-                            </div>
+        <section className="bg-white px-4">
 
-                            {/* Bloc paragraphe */}
-                            <div className="">
-                                <p className="text-[20px] leading-[150%] font-normal text-gray-700 tracking-[-0.02em]">
-                                    Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.
+            {/* Header */}
+            <div className="relative w-full mx-auto pt-[32px] md:pt-[120px] md:text-center">
+                {/* Texte 1 */}
+
+                <p className="font-semibold text-primary leading-[150%] tracking-[-0.02em] text-base md:text-[20px] py-1 rounded-full block mb-4 md:mb-3">
+                    WHY USE SPEND.IN
+                </p>
+                <div className='w-full mt-[6px] md:mt-[12px] '>
+                    {/* Titre */}
+                    <h1 className="font-bold text-secondary900 leading-[150%] tracking-[-0.03em] text-[24px] md:text-[40px]">
+                        Easy, Simple,
+                        <br className='flex md:hidden' />
+                        Affordable
+                    </h1>
+                    {/* Paragraphe */}
+                    <p className="mt-[12px] md:mt-[24px] text-[16px] md:text-[20px] leading-[150%] font-normal text-gray-700 tracking-[-0.02em] max-w-[314px] md:max-w-[712px] md:ml-[408px]">
+                        Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.
+                    </p>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-[32px] md:mt-[64px]">
+                {/* Benefits */}
+                <div className="space-y-8">
+                    {benefits.map((item, index) => (
+                        <div key={index} className="flex items-start gap-4">
+                            <div className="w-12 h-12 flex-shrink-0 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
+                            </div>
+                            <div>
+                                <h3 className="text-[20px] md:text-[22px] font-semibold text-black   tracking-[-0.02em] leading-[150%]">
+                                    {item.title}
+                                </h3>
+                                <p className="mt-2 text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-gray-600  ">
+                                    {item.description}
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    ))}
+                </div>
+                <div className="bg-secondary-100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
+                    <img src={benefit2nd} alt="" className="object-contain" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-3">
-                    {/* Benefits */}
-                    <div className="space-y-8">
-                        {benefits.map((item, index) => (
-                            <div key={index} className="flex items-start gap-4">
-                                <div className="w-12 h-12 flex-shrink-0 bg-purple-100 rounded-lg flex items-center justify-center p-2">
-                                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
-                                </div>
-                                <div>
-                                    <h3 className="text-[20px] md:text-[22px] font-semibold text-black   tracking-[-0.02em] leading-[150%]">
-                                        {item.title}
-                                    </h3>
-                                    <p className="mt-2 text-[16px] leading-[150%] font-normal tracking-[-0.02em] text-gray-600  ">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="bg-secondary-100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
-                        <img src={benefit2nd} alt="" className="object-contain" />
-                    </div>
-
-                </div>
             </div>
         </section>
     );

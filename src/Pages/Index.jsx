@@ -33,7 +33,7 @@ function Index() {
     }, []);
 
     return (
-        <div className={`font-plusjakarta`}
+        <div className={`font-plusjakarta w-full`}
         >
             {scrolled ? <NavbarSection /> : null}
             <div id="accueil"
