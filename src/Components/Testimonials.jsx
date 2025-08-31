@@ -98,13 +98,7 @@ export default function Testimonials() {
                     {visibleTestimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="
-        bg-secondary500 
-        rounded-xl 
-        p-6 
-        flex flex-col 
-        h-full
-      "
+                            className="bg-secondary500 rounded-xl p-6 flex flex-col h-full transition-transform hover:scale-[1.5] hover:shadow-lg hover:shadow-primary"
                         >
                             {/* Contenu du haut */}
                             <div>

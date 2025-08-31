@@ -81,7 +81,7 @@ export default function SuccessStories() {
                             </div>
                         ))}
                     </div>
-                    <div className="bg-secondary100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
+                    <div className="bg-secondary100 h-full flex items-end w-full shadow-lg transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary" style={{ borderRadius: "12px" }}>
                         <img src={image} alt="" className="object-contain" />
                     </div>
 
