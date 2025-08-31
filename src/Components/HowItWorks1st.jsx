@@ -21,7 +21,7 @@ const benefits = [
 
 export default function HowItWorks1st() {
     return (
-        <section className="bg-secondary700 text-white py-16 px-6 md:px-20">
+        <section className="bg-secondary-700 text-white py-16 px-6 md:px-20">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 text-center">
@@ -30,7 +30,7 @@ export default function HowItWorks1st() {
                             HOW IT WORKS
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full mb-3">
-                            <div className="md:col-span-8 md:col-start-3 bg-secondary700 mx-auto px-4">
+                            <div className="md:col-span-8 md:col-start-3 bg-secondary-700 mx-auto px-4">
                                 {/* Bloc titre */}
                                 <div className="mb-3">
                                     <h1 className="text-5xl font-bold">
@@ -39,7 +39,7 @@ export default function HowItWorks1st() {
                                 </div>
                                 {/* Bloc paragraphe */}
                                 <div className="mb-3">
-                                    <p className="text-[20px] leading-[150%] font-normal text-secondary300 tracking-[-0.02em]">
+                                    <p className="text-[20px] leading-[150%] font-normal text-secondary-300 tracking-[-0.02em]">
                                         In just few easy steps, you are all set to manage your business finances.
                                         Manage all expenses with Spend.In all in one place.
                                     </p>

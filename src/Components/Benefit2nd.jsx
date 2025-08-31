@@ -73,7 +73,7 @@ export default function SpendBenefits() {
                             </div>
                         ))}
                     </div>
-                    <div className="bg-secondary100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
+                    <div className="bg-secondary-100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
                         <img src={benefit2nd} alt="" className="object-contain" />
                     </div>
 

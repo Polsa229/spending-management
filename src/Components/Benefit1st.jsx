@@ -28,28 +28,30 @@ const benefit1stCard = [
 const Benefit1st = () => {
 
     return (
-        <div className="flex justify-center min-h-screen px-3">
+        <section
+            className="relative w-full max-w-[1440px] h-full bg-white mx-auto px-4"
+        // className="flex justify-center min-h-screen px-3"
+        >
 
-            <div className="mt-10 mb-3 max-w-6xl">
-                <div>
-                    <p className="text-sm text-primary px-3 py-1 rounded-full block md:mb-3">
+            <div className="mt-[32px] md:mt-[120px] mb-3">
+                <div className="relative w-full mx-auto pt-[32px] md:pt-[120px]">
+                    {/* Texte 1 */}
+
+                    <p className="font-semibold text-primary leading-[150%] tracking-[-0.02em] text-base md:text-[20px] py-1 rounded-full block mb-4 md:mb-3">
                         WHY USE SPEND.IN
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-9 gap-6 w-full mb-3 items-end ">
-                        {/* Bloc titre */}
-                        <div className="md:col-span-4">
-                            <h1 className="text-5xl font-bold">
-                                Easy, Simple,
-                                Affordable
-                            </h1>
-                        </div>
+                    <div className='md:flex items-center w-full '>
+                        {/* Titre */}
+                        <h1 className="font-plusjakarta font-bold text-secondary900 leading-[150%] tracking-[-0.03em] text-[24px] md:text-[40px] mb-[32px] max-w-[147px] md:max-w-[245px]">
+                            Easy, Simple,
+                            <br />
+                            Affordable
+                        </h1>
 
-                        {/* Bloc paragraphe */}
-                        <div className="md:col-span-5 ">
-                            <p className="text-[20px] leading-[150%] font-normal text-gray-700 tracking-[-0.02em]">
-                                Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.
-                            </p>
-                        </div>
+                        {/* Paragraphe */}
+                        <p className="font-plusjakarta text-[16px] md:text-[20px] leading-[150%] font-normal text-gray-700 tracking-[-0.02em] max-w-[314px] md:max-w-[496px] md:ml-[408px]">
+                            Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.
+                        </p>
                     </div>
                 </div>
 
@@ -76,12 +78,8 @@ const Benefit1st = () => {
                         </div>
                     ))}
                 </div>
-
-
             </div>
-
-
-        </div>
+        </section>
     );
 };
 

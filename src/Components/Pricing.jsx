@@ -71,7 +71,7 @@ export default function Pricing() {
                     <div className="md:col-span-8 md:col-start-3">
                         <div className="grid grid-cols-1 gap-6 w-full mb-3">
                             <h1 className="text-5xl font-bold">Ready to Get Started?</h1>
-                            <p className="text-[20px] leading-[150%] text-secondary300 tracking-[-0.02em]">
+                            <p className="text-[20px] leading-[150%] text-secondary-300 tracking-[-0.02em]">
                                 Choose a plan that suits your business needs
                             </p>
                         </div>
@@ -101,7 +101,7 @@ export default function Pricing() {
                             {/* Discount Badge */}
                             {isYearly && (
                                 <div className="flex justify-end items-center">
-                                    <div className="px-3 py-1 bg-primary100 rounded-full flex items-center gap-2 text-sm font-semibold w-auto">
+                                    <div className="px-3 py-1 bg-primary-100 rounded-full flex items-center gap-2 text-sm font-semibold w-auto">
                                         Save 65%
                                     </div>
                                     <img src={arrow07} alt="" />
@@ -122,7 +122,7 @@ export default function Pricing() {
                         return (
                             <div
                                 key={plan.title}
-                                className="bg-secondary100 text-black rounded-xl p-6 flex flex-col shadow-sm transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary"
+                                className="bg-secondary-100 text-black rounded-xl p-6 flex flex-col shadow-sm transition-transform hover:scale-[1.02] duration-300 hover:shadow-primary"
                             >
                                 <div
                                     className="flex justify-between items-center"
@@ -138,18 +138,18 @@ export default function Pricing() {
 
                                     {/* Badge “Popular” */}
                                     {plan.popular && (
-                                        <span className="self-center mb-4 px-3 py-1 bg-secondary700 text-white rounded-full text-sm font-semibold">
+                                        <span className="self-center mb-4 px-3 py-1 bg-secondary-700 text-white rounded-full text-sm font-semibold">
                                             Popular
                                         </span>
                                     )}
 
                                 </div>
 
-                                <p className="text-secondary400 mt-2">{plan.description}</p>
+                                <p className="text-secondary-400 mt-2">{plan.description}</p>
 
                                 <div className="flex items-baseline mt-4">
                                     <AnimatedPriceCounter targetPrice={!isYearly && plan.price ? baseYearlyPrice : plan.price} />
-                                    <span className="ml-1 text-lg text-secondary300">/month</span>
+                                    <span className="ml-1 text-lg text-secondary-300">/month</span>
                                 </div>
 
                                 {/* Liste des fonctionnalités */}
@@ -164,11 +164,11 @@ export default function Pricing() {
                                                     </div>
                                                     :
 
-                                                    <div className="bg-secondary400 mr-2 rounded-full flex items-center justify-center p-1">
+                                                    <div className="bg-secondary-400 mr-2 rounded-full flex items-center justify-center p-1">
                                                         <FaXmark className="text-white" />
                                                     </div>
                                             }
-                                            <span className={`text-sm ${feature.included ? "text-secondary700" : "text-secondary400"} `}>{feature.text}</span>
+                                            <span className={`text-sm ${feature.included ? "text-secondary-700" : "text-secondary-400"} `}>{feature.text}</span>
                                         </li>
                                     ))}
                                 </ul>

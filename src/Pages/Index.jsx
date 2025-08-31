@@ -37,8 +37,8 @@ function Index() {
         >
             {scrolled ? <NavbarSection /> : null}
             <div id="accueil"
-                // className={`bg-secondary700 relative min-h-screen"`}
-                className="relative bg-secondary700 w-full max-w-[1440px] mx-auto min-h-[737px] md:min-h-[1072px] h-auto overflow-hidden"
+                // className={`bg-secondary-700 relative min-h-screen"`}
+                className="relative bg-secondary-700 w-full max-w-[1440px] mx-auto min-h-[737px] md:min-h-[1072px] h-auto overflow-hidden"
             >
                 <img src={Ellipse1} alt="Ellipse" className="absolute top-0 left-0 h-48 w-48 md:h-96 md:w-96 object-fill z-0" />
                 <img src={Ellipse2} alt="Ellipse" className="absolute top-0 right-0 h-48 w-48 md:h-96 md:w-96 object-fill z-0" />

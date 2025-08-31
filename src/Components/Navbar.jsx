@@ -85,7 +85,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className={`sticky top-0 z-30 w-full h-[88px] md:h-[100px] flex items-center px-6 py-4 justify-between backdrop-blur-sm transition-all duration-300 ease-in-out ${scrolled ? "bg-secondary700" : ""}`}>
+      <nav className={`sticky top-0 z-30 w-full  md:border-0 border-b-[1px] h-[88px] md:h-[100px] flex items-center px-6 py-4 justify-between backdrop-blur-sm transition-all duration-300 ease-in-out ${scrolled ? "bg-secondary-700" : ""}`}>
         {/* Logo */}
         <div className="text-xl font-bold flex items-center gap-2">
           <img src={Logo} alt="Logo" className="" />
@@ -139,10 +139,10 @@ export default function Navbar() {
         {/* Buttons */}
 
         <div className="hidden lg:flex  gap-4 items-center">
-          <button className="text-white px-4 py-2 rounded-full hover:bg-white hover:text-secondary500 transition">
+          <button className="text-white px-4 py-2 rounded-full hover:bg-white hover:text-secondary-500 transition">
             Login
           </button>
-          <button className="bg-primary text-white hover:bg-secondary500 hover:text-primary px-4 py-2 rounded-full transition">
+          <button className="bg-primary text-white hover:bg-secondary-500 hover:text-primary px-4 py-2 rounded-full transition">
             Get Demo
           </button>
         </div>
@@ -166,7 +166,7 @@ export default function Navbar() {
       </nav>
 
       {/* Offcanvas Menu (Left side) */}
-      <div className={`z-50 fixed top-0 left-0 h-full w-full bg-secondary700 text-white shadow-lg transform transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}>
+      <div className={`z-50 fixed top-0 left-0 h-full w-full bg-secondary-700 text-white shadow-lg transform transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}>
         {/* Header */}
         <div className="flex justify-between items-center px-6 py-4">
           <div className="text-lg font-bold">

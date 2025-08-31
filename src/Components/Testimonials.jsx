@@ -69,7 +69,7 @@ export default function Testimonials() {
     const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 3);
 
     return (
-        <section className="bg-secondary700 text-white py-16 px-6 md:px-20">
+        <section className="bg-secondary-700 text-white py-16 px-6 md:px-20">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 grid grid-cols-1 md:grid-cols-12 gap-6 w-full items-center text-center">
@@ -86,7 +86,7 @@ export default function Testimonials() {
                             </div>
 
                             <div>
-                                <p className="text-[20px] leading-[150%] font-normal text-secondary300 tracking-[-0.02em]">
+                                <p className="text-[20px] leading-[150%] font-normal text-secondary-300 tracking-[-0.02em]">
                                     Here are some testimonials from our user after using Spend.In to manage their business expenses.
                                 </p>
                             </div>
@@ -98,7 +98,7 @@ export default function Testimonials() {
                     {visibleTestimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-secondary500 rounded-xl p-6 flex flex-col h-full transition-transform hover:scale-[1.5] hover:shadow-lg hover:shadow-primary"
+                            className="bg-secondary-500 rounded-xl p-6 flex flex-col h-full transition-transform hover:scale-[1.5] hover:shadow-lg hover:shadow-primary"
                         >
                             {/* Contenu du haut */}
                             <div>
@@ -137,7 +137,7 @@ export default function Testimonials() {
                 <div className="flex items-center justify-center gap-4">
                     <button
                         onClick={goToPrevious}
-                        className="bg-secondary500 rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors"
+                        className="bg-secondary-500 rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors"
                         aria-label="Previous testimonials"
                     >
                         <IoArrowBack />

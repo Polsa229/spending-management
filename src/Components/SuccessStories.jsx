@@ -65,14 +65,14 @@ export default function SuccessStories() {
                                 {/* Buttons */}
                                 <button
                                     onClick={() => setActive('with')}
-                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'with' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary300'
+                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'with' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary-300'
                                         }`}
                                 >
                                     With Spend.In
                                 </button>
                                 <button
                                     onClick={() => setActive('without')}
-                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'without' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary300'
+                                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${active === 'without' ? 'bg-primary text-white' : 'hover:bg-primary text-secondary-300'
                                         }`}
                                 >
                                     Without Spend.In
@@ -95,7 +95,7 @@ export default function SuccessStories() {
                             </div>
                         ))}
                     </div>
-                    <div className={`bg-secondary100 h-full flex items-end w-full shadow-md transition-transform hover:scale-[1.02] duration-300 ${active === 'with' ? "hover:shadow-[green]" : "hover:shadow-[red]"}`} style={{ borderRadius: "12px" }}>
+                    <div className={`bg-secondary-100 h-full flex items-end w-full shadow-md transition-transform hover:scale-[1.02] duration-300 ${active === 'with' ? "hover:shadow-[green]" : "hover:shadow-[red]"}`} style={{ borderRadius: "12px" }}>
                         <img src={image} alt="" className="object-contain select-none" />
                     </div>
                 </motion.div>

@@ -16,14 +16,14 @@ const CallToActionBtn = () => {
                     scale: 0.95,
                     transition: { type: "spring", damping: 10, stiffness: 400 }
                 }}
-                className="bg-primary w-full md:max-w-[187px] text-white hover:bg-secondary500 hover:text-primary px-4 py-2 rounded-full transition"
+                className="bg-primary w-full md:max-w-[187px] text-white hover:bg-secondary-500 hover:text-primary px-4 py-2 rounded-full transition"
             >
                 Get a Free Demo
             </motion.button>
             <motion.button
 
 
-                className="bg-secondary500 w-full md:max-w-[187px] text-white px-4 py-2 rounded-full hover:bg-white hover:text-secondary500 transition"
+                className="bg-secondary-500 w-full md:max-w-[187px] text-white px-4 py-2 rounded-full hover:bg-white hover:text-secondary-500 transition"
                 onClick={() => scrollToSection(navigate, "/", "pricing")}
             >
                 See Pricing

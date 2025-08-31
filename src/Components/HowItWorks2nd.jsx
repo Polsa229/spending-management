@@ -20,12 +20,12 @@ const howToWorkdata = [
 
 export default function HowItWorks2nd() {
     return (
-        <section className="bg-secondary700 text-white py-16 px-6 md:px-20">
+        <section className="bg-secondary--700 text-white py-16 px-6 md:px-20">
             <div className=" max-w-6xl mx-auto">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-3">
                     {/* How to works 2nd */}
-                    <div className="bg-secondary100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
+                    <div className="bg-secondary--100 h-full flex items-end w-full shadow-lg" style={{ borderRadius: "12px" }}>
                         <img src={howToWorks2nd} alt="" className="object-contain" />
                     </div>
 
@@ -46,14 +46,14 @@ export default function HowItWorks2nd() {
 
                                     {/* Bloc paragraphe */}
                                     <div className="">
-                                        <p className="text-[20px] leading-[150%] font-normal text-secondary300 tracking-[-0.02em]">
+                                        <p className="text-[20px] leading-[150%] font-normal text-secondary--300 tracking-[-0.02em]">
                                             In just few easy step, you are all set to manage your business finances. Manage all expenses with Spend.In all in one place.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="p-3 bg-secondary500">
+                        <div className="p-3 bg-secondary--500">
                             {howToWorkdata.map((step, index) => (
                                 <div key={index} className="flex items-start gap-x-6 relative">
                                     {/* Number + Line */}
