@@ -2,6 +2,12 @@
 import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 
+export const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -18,12 +24,7 @@ const BackToTop = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
+
 
   if (!isVisible) {
     return null;

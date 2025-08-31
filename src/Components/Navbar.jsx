@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Logo from "../assets/Logo.png";
 import { scrollToSection } from './../functions/scrollingFunctions';
 import { useNavigate } from 'react-router-dom';
+import { scrollToTop } from './BackToTop';
 
 const menuItems = [
   {
@@ -62,6 +63,26 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [currentSection, setCurrentSection] = useState(null);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setCurrentSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+    return () => sections.forEach(section => observer.unobserve(section));
+  }, []);
+
+
   // Fermer le menu mobile en cliquant à l'extérieur
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -87,7 +108,9 @@ export default function Navbar() {
       {/* Navbar */}
       <nav className={`sticky top-0 z-30 w-full md:border-0 border-b-[1px] flex items-center px-6 py-4 justify-between backdrop-blur-sm transition-all duration-300 ease-in-out ${scrolled ? "bg-secondary-700" : "h-[88px]  md:h-[100px] "}`}>
         {/* Logo */}
-        <div className="text-xl font-bold flex items-center gap-2">
+        <div className="text-xl font-bold flex items-center gap-2 cursor-pointer"
+          onClick={scrollToTop}
+        >
           <img src={Logo} alt="Logo" className="" />
         </div>
 
@@ -101,7 +124,11 @@ export default function Navbar() {
               onMouseLeave={() => setHoveredItem(null)}
               onClick={() => scrollToSection(item.link)}
             >
-              <span className="flex items-center gap-1 hover:text-primary transition"
+              <span
+
+                className={`relative flex items-center gap-1 transition-all duration-500 ease-in-out hover:text-primary-500 ${currentSection === item.id ? 'text-primary-500 font-semibold' : 'text-light'
+                  }`}
+                // className="flex items-center gap-1 hover:text-primary transition"
                 onClick={() => {
                   scrollToSection(navigate, item.link, item.id);
                 }}
